@@ -1,0 +1,23 @@
+# Ignore folder vendor (library composer)
+vendor/
+
+# File config sensitif (jika perlu)
+config/koneksi.php
+
+# File environment (jika digunakan)
+.env
+
+# File backup atau sementara
+*.log
+*.bak
+*.tmp
+*.sql
+*.zip
+
+# Folder editor
+.vscode/
+.idea/
+
+# Sistem OS
+.DS_Store
+Thumbs.db

@@ -1,5 +1,4 @@
 <?php
-// ===== File: admin/perhitungan/cetak_hasil_ahp.php =====
 require '../../vendor/autoload.php';
 require '../../config/koneksi.php';
 
@@ -22,11 +21,10 @@ if (mysqli_num_rows($result) > 0) {
 } else {
     echo '<p>Data belum tersedia.</p>';
 }
-?>
-<?php
 $html = ob_get_clean();
+
 $dompdf->loadHtml($html);
 $dompdf->setPaper('A4', 'portrait');
 $dompdf->render();
-$dompdf->stream("hasil_ahp.pdf");
+$dompdf->stream('hasil_ahp.pdf', ['Attachment' => false]);
 ?>
